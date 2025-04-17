@@ -1,0 +1,27 @@
+import os
+
+def remove_suffix_from_filenames(folder_path, suffix_to_remove):
+    try:
+        # 遍历文件夹内的所有文件
+        for filename in os.listdir(folder_path):
+            # 获取文件的完整路径
+            full_path = os.path.join(folder_path, filename)
+            
+            # 检查是否是文件
+            if os.path.isfile(full_path) and filename.endswith(suffix_to_remove):
+                # 生成新的文件名
+                new_filename = filename[:-len(suffix_to_remove)]
+                new_full_path = os.path.join(folder_path, new_filename)
+                
+                # 重命名文件
+                os.rename(full_path, new_full_path)
+                print(f"已重命名: {filename} -> {new_filename}")
+                
+        print("处理完成！")
+    except Exception as e:
+        print(f"发生错误: {e}")
+
+# 使用示例
+folder_path = "你的文件夹路径"  # 替换为实际的文件夹路径
+suffix_to_remove = "_去掉的后缀"  # 替换为你想移除的后缀
+remove_suffix_from_filenames(folder_path, suffix_to_remove)
