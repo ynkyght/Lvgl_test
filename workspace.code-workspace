@@ -1,0 +1,14 @@
+{
+	"folders": [],
+	"settings": {
+		"java.dependency.packagePresentation": "hierarchical",
+		"java.project.explorer.showNonJavaResources": false,
+		"java.debug.settings.onBuildFailureProceed": true,
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.project.sourcePaths": [
+			"JMS/src/main/java/com/example",
+			".vscode",
+			"Maven_JMS/demo/src/main/java/com/example"
+		]
+	}
+}
